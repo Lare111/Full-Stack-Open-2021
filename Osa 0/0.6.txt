@@ -1,0 +1,12 @@
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+palvelin->selain: HTML-koodi
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin->selain: main.css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+palvelin->selain: spa.js
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+palvelin->selain: [{content: "väsyttää", date: "2021-09-17T08:59:46.177Z"}]
+
+/* Selain lataa javascript-koodin palvelimelta ja suorittaa sen. Post-metodilla
+kirjoitettu teksti tallennetaan palvelimelle ja selain saa kommentin palvelimelta. Vain kaksi viimeistä
+koodin riviä tapahtuu kommentin kirjoittamisen aikana. Aiemmat rivit ovat jo sivun lataamisen ajalta*/
