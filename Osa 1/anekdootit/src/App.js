@@ -29,8 +29,9 @@ const App = () => {
   ]
    
   const [selected, setSelected] = useState(0)
-  const [points, setPoints] = useState(new Uint8Array(10));
+  const [points, setPoints] = useState(new Uint8Array(7));
   const [mostVotes, setMostVotes] = useState(0);
+  
 
   return (
     <div>
@@ -42,7 +43,9 @@ const App = () => {
 	  <button onClick={handleVote}>vote</button>
 	  <br />
       <h1>Anecdote with most votes</h1>
-      {anecdotes[mostVotes]}
+      {anecdotes[mostVotes]} 
+	  <br />
+	  <p> It has {points[mostVotes]} points. </p>
 	  
 	  
     </div>
